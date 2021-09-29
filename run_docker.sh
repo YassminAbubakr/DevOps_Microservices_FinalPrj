@@ -10,4 +10,5 @@ docker build --tag=devops_microservice .
 docker image ls
 # Step 3: 
 # Run flask app
-docker run -it devops_microservice bash 
+#docker run devops_microservice bash 
+docker run -it -p 8000:80 devops_microservice
