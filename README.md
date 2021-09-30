@@ -40,3 +40,6 @@ Your project goal is to operationalize this working, machine learning microservi
 2. Run in Docker:  `./run_docker.sh`
 3. Run in Kubernetes:  `./run_kubernetes.sh`
 
+### CircleCi Link
+   https://app.circleci.com/pipelines/github/YassminAbubakr/DevOps_Microservices_FinalPrj
+
