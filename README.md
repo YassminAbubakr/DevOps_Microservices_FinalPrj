@@ -1,3 +1,4 @@
+[![CircleCI](https://circleci.com/gh/YassminAbubakr/DevOps_Microservices_FinalPrj/tree/main.svg?style=svg)](https://circleci.com/gh/YassminAbubakr/DevOps_Microservices_FinalPrj/tree/main)
 <include a CircleCI status badge, here>
 
 ## Project Overview
