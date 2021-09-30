@@ -1,7 +1,7 @@
 [![CircleCI](https://circleci.com/gh/YassminAbubakr/DevOps_Microservices_FinalPrj/tree/main.svg?style=svg)](https://circleci.com/gh/YassminAbubakr/DevOps_Microservices_FinalPrj/tree/main)
 
 
-## Project Overview
+### Project Overview
 
 In this project, i used the skills that i acquired in this course to operationalize a Machine Learning Microservice API. 
 By Applying Docker & Kubernetes concepts to predict housing prices in Boston .
@@ -29,7 +29,7 @@ Your project goal is to operationalize this working, machine learning microservi
 - run_kubernetes.sh : This is used to deploy your application on the Kubernetes cluster, This assumes you have a local cluster configured and running. This script should create a pod with a name specified. 
 - upload_docker.sh : This script upload the built image to docker. This will make it accessible to a Kubernets cluster.
 
-## Setup the Environment
+### Setup the Environment
 
 * Create a virtualenv and activate it
 * Run `make install` to install the necessary dependencies
@@ -42,4 +42,32 @@ Your project goal is to operationalize this working, machine learning microservi
 
 ### CircleCi Link
    https://app.circleci.com/pipelines/github/YassminAbubakr/DevOps_Microservices_FinalPrj
+   
+### Instruction to replicate the project:
+Create Virtual environemnt 
+    make setup
+Activate the virtual environemnt
+    source ~/.devops/bin/activate 
+Install the Requirment
+    make install 
+Lint the Code
+    make lint
+Build The container
+    ./run_docker.sh
+Make Predictions
+    ./make_prediction.sh 
+Upload the Image
+    ./upload_docker.sh
+Install Minikube
+    refer to :https://kubernetes.io/docs/tasks/tools/install-kubectl/
+Start Minikube
+    minikube start
+Deploy with Kubernetes
+    ./run_kubernetes.sh
+Check the pods
+    minikube kubectl get pods
+Make Predictions
+    ./make_prediction.sh 
+configure Circleci
+    add .circlci/config.yml file to up and running in circleci.com
 
