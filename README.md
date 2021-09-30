@@ -3,10 +3,10 @@
 
 ## Project Overview
 
-In this project, you will apply the skills you have acquired in this course to operationalize a Machine Learning Microservice API. 
-
-You are given a pre-trained, `sklearn` model that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. You can read more about the data, which was initially taken from Kaggle, on [the data source site](https://www.kaggle.com/c/boston-housing). This project tests your ability to operationalize a Python flask app—in a provided file, `app.py`—that serves out predictions (inference) about housing prices through API calls. This project could be extended to any pre-trained machine learning model, such as those for image recognition and data labeling.
-
+In this project, i used the skills that i acquired in this course to operationalize a Machine Learning Microservice API. 
+By Applying Docker & Kubernetes concepts to predict housing prices in Boston .
+Docker Technology uses the Linux kernel system so the processes can run independently .
+Kubernetes is an open-source platform that manages containerized workloads and services that can simplify the configurationand automation.
 ### Project Tasks
 
 Your project goal is to operationalize this working, machine learning microservice using [kubernetes](https://kubernetes.io/), which is an open-source system for automating the management of containerized applications. In this project you will:
@@ -18,11 +18,16 @@ Your project goal is to operationalize this working, machine learning microservi
 * Deploy a container using Kubernetes and make a prediction
 * Upload a complete Github repo with CircleCI to indicate that your code has been tested
 
-You can find a detailed [project rubric, here](https://review.udacity.com/#!/rubrics/2576/view).
-
-**The final implementation of the project will showcase your abilities to operationalize production microservices.**
-
----
+### Required Files in Repo
+- .circleci/config.yml : Defines an automated testing environment; CircleCI uses a YAML file to identify how you want your testing environment set up and what tests you want to run.  
+- app.py : file contained the pre-trained model prediction. 
+- Dockerfile : The Dockerfile contains all the required commands to build an image from CMD. 
+- make_prediction.sh : This script is responsible for sending some input data to your containerized application via the appropriate port. Each numerical value in here represents some feature that is important for determining the price of a house in Boston. 
+- Makefile : it includes instructions for environment setup,lint and tests. 
+- requirements.txt : contain all the lib dependencies that need to be installed. 
+- run_docker.sh : has a list of all docker commands to build & run the docker image that is built previously in Dockerfile. 
+- run_kubernetes.sh : This is used to deploy your application on the Kubernetes cluster, This assumes you have a local cluster configured and running. This script should create a pod with a name specified. 
+- upload_docker.sh : This script upload the built image to docker. This will make it accessible to a Kubernets cluster.
 
 ## Setup the Environment
 
@@ -35,9 +40,3 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 2. Run in Docker:  `./run_docker.sh`
 3. Run in Kubernetes:  `./run_kubernetes.sh`
 
-### Kubernetes Steps
-
-* Setup and Configure Docker locally
-* Setup and Configure Kubernetes locally
-* Create Flask app in Container
-* Run via kubectl
